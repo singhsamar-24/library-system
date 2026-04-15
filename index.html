@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Library Management System</title>
+
+  <!-- Mobile Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>📚 Library Management System</h1>
+
+<div class="container">
+
+  <!-- Books -->
+  <div class="card">
+    <h2>📖 Book List</h2>
+    <table id="bookTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- Issue -->
+  <div class="card">
+    <h2>📥 Issue Book</h2>
+    <input type="number" id="issueId" placeholder="Book ID">
+    <input type="text" id="studentName" placeholder="Student Name">
+    <button onclick="issueBook()">Issue Book</button>
+  </div>
+
+  <!-- Return -->
+  <div class="card">
+    <h2>📤 Return Book</h2>
+    <input type="number" id="returnId" placeholder="Book ID">
+    <button onclick="returnBook()">Return Book</button>
+  </div>
+
+  <!-- Issued -->
+  <div class="card">
+    <h2>📋 Issued Books</h2>
+    <ul id="issuedList"></ul>
+  </div>
+
+  <!-- Queue -->
+  <div class="card">
+    <h2>⏳ Waiting Queue</h2>
+    <ul id="queueList"></ul>
+  </div>
+
+  <!-- Stack -->
+  <div class="card">
+    <h2>📦 Return Stack</h2>
+    <ul id="stackList"></ul>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
