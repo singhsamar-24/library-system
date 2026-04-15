@@ -1,9 +1,15 @@
 // Load from localStorage
 let books = JSON.parse(localStorage.getItem("books")) || [
-  {id: 1, name: "DSA Basics", available: true},
-  {id: 2, name: "Algorithms", available: true},
-  {id: 3, name: "Operating System", available: true},
-  {id: 4, name: "DBMS", available: true}
+  {id: 101, name: "Engineering Mathematics", available: true},
+  {id: 102, name: "Applied Physics", available: true},
+  {id: 103, name: "Basic Electrical Engineering", available: true},
+  {id: 104, name: "Data Structures and Algorithms", available: true},
+  {id: 105, name: "Database Management Systems", available: true},
+  {id: 106, name: "Operating System Concepts", available: true},
+  {id: 107, name: "Internet of Things (IoT)", available: true},
+  {id: 108, name: "Computer Networks", available: true},
+  {id: 109, name: "Artificial Intelligence", available: true},
+  {id: 110, name: "Software Engineering", available: true}
 ];
 
 let issuedBooks = JSON.parse(localStorage.getItem("issuedBooks")) || [];
