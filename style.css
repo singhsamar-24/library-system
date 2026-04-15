@@ -54,8 +54,10 @@ h1 {
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  padding: 18px;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* CARD */
