@@ -4,13 +4,12 @@ body {
   transition: 0.3s;
 }
 
-/* LIGHT MODE */
+/* THEMES */
 body.light {
-  background: #f4f6f9;
-  color: #333;
+  background: #f1f5f9;
+  color: #1e293b;
 }
 
-/* DARK MODE */
 body.dark {
   background: #0f172a;
   color: #e2e8f0;
@@ -19,61 +18,68 @@ body.dark {
 /* HEADER */
 h1 {
   text-align: center;
-  padding: 20px;
+  padding: 18px;
   margin: 0;
   background: linear-gradient(90deg, #3b82f6, #06b6d4);
   color: white;
+  font-size: 22px;
 }
 
 /* TOP BAR */
 .top-bar {
   display: flex;
-  gap: 10px;
-  padding: 10px;
   justify-content: center;
+  gap: 10px;
+  padding: 12px;
 }
 
 .top-bar input {
+  width: 260px;
   padding: 10px;
-  width: 250px;
-  border-radius: 8px;
+  border-radius: 10px;
   border: none;
+  outline: none;
 }
 
 .top-bar button {
-  padding: 10px;
-  border-radius: 8px;
+  padding: 10px 15px;
+  border-radius: 10px;
   border: none;
   background: #22c55e;
   color: white;
   cursor: pointer;
 }
 
-/* GRID */
+/* MAIN GRID */
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 18px;
 }
 
 /* CARD */
 .card {
-  border-radius: 15px;
-  padding: 20px;
+  border-radius: 16px;
+  padding: 18px;
   transition: 0.3s;
 }
 
-/* LIGHT CARD */
+/* LIGHT */
 body.light .card {
   background: white;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.08);
 }
 
-/* DARK CARD */
+/* DARK */
 body.dark .card {
   background: #1e293b;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.5);
+}
+
+/* FULL WIDTH CARDS */
+.card.full {
+  grid-column: span 3;
 }
 
 /* INPUT */
@@ -100,6 +106,7 @@ button {
 table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 14px;
 }
 
 th, td {
@@ -114,8 +121,19 @@ ul {
 }
 
 li {
-  padding: 6px;
-  margin: 4px 0;
-  border-radius: 6px;
-  background: rgba(255,255,255,0.1);
+  padding: 8px;
+  margin: 6px 0;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .card.full {
+    grid-column: span 1;
+  }
 }
